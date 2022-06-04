@@ -1,17 +1,17 @@
 <div class="pres">
   <div class="pres-word-container">
-    <p class="pres-word margin--none">revolutionary</p>
-    <p class="pres-word--secondary margin--none">revolucionario</p>
+    <p class="pres-word margin--none">{{presWord}}</p>
+    <p class="pres-word--secondary margin--none">{{presWordSecondary}}</p>
   </div>
   <div class="pres-controller-container">
     <div class="pres-controller">
-      <button class="btn">Start</button>
-      <button class="btn">Back</button>
-      <button class="btn">Toggle</button>
-      <button class="btn">Examples</button>
-      <button class="btn">Seen</button>
-      <button class="btn">Skip</button>
-      <button class="btn">End</button>
+      <button class="btn" type="button" (click)="onStart($event)">Start</button>
+      <button class="btn" type="button" (click)="onBack($event)">Back</button>
+      <button class="btn" type="button" (click)="onToggle($event)">Toggle</button>
+      <button class="btn" type="button" (click)="onExamples($event)">Examples</button>
+      <button class="btn" type="button" (click)="onSeen($event)">Seen</button>
+      <button class="btn" type="button" (click)="onSkip($event)">Skip</button>
+      <button class="btn" type="button" (click)="onEnd($event)">End</button>
     </div>
   </div>
 </div>
