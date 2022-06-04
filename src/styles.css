@@ -1,1 +1,383 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --sidebar-width: 300px;
+  --xl:5rem!important;
+  --lg:2rem!important;
+  --md:1rem!important;
+  --sm:.5rem!important;
+  --xs:.25rem!important;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%; /* font-size: 1.4rem; } =14px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(28, 30, 33);
+}
+
+/* HTML TAGS */
+
+/* aside {
+  background: rgba(0, 0, 0, 0.3);
+} */
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* WRAPPERS AND CONTAINERS */
+
+.main-container {
+  height: 100%;
+  width: 100%; /*need to set this because this is a flex item and default is t size according to content. Could also set flez-grow: 1 */
+  max-width: calc(100% - var(--sidebar-width));
+  /* padding-top:var(--md);
+  padding-bottom:var(--lg);
+  padding-left:var(--md);
+  padding-right:var(--md); */
+  padding: 0 var(--md);
+}
+
+.main-wrapper {
+  /* flex: 1 0 auto; toresearch */
+  display: flex;
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* LAYOUT */
+
+.btn{
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(227deg, rgb(44, 241, 217) 0%, rgb(23, 173, 237) 100%);
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  color:white;
+  padding: var(--md) var(--lg);
+  margin: auto var(--md);
+}
+
+.menu {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.menu-list {
+  list-style: none;
+  padding-bottom: var(--md);
+}
+
+.menu__item {
+display: inline-block;
+margin-top: 2rem;
+padding:2rem;
+
+}
+
+.menu__link{
+  color:whitesmoke;
+  font-size: 3rem;
+  background-color: rgb(53, 36, 70);
+  /* background: #FFD494; */
+  /* background: #EA8EA4;
+  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%, #FFD494 50.69%); */
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 0, .9);
+  background-color: rgba(68, 34, 102, 0.796);
+  background-color: rgb(216, 184, 108);
+  background-color: rgb(231, 208, 211);
+  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%);
+  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%),linear-gradient(129.1deg, #EA8EA4 -1.7%, rgba(253, 229, 178, 0) 72.42%),linear-gradient(26.22deg, #7735E4 2.78%, #DA70A9 30.98%, #F3C690 53.17%);
+  padding: 12px;
+  /* border-top: .3px solid black; */
+}
+
+.navbar--fixed {
+  position: sticky;
+}
+
+.navbar__brand {
+  display: flex;
+}
+
+.navbar__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar__item {
+padding-right:5rem;
+}
+
+.navbar__link {
+  color: white;
+  color:purple;
+  color: rgb(28, 7, 50);
+  color:white;
+  font-weight:500;
+  font-size: 2rem;;
+}
+
+.navbar__items {
+  display: flex;
+  /* justify-content: space-between; */
+  width:50%;
+  padding: 1.2rem;
+}
+
+.navbar__items--right {
+  justify-content: flex-end;
+  margin-left: auto;
+  width: 33%;
+}
+
+.pres { /*  main vocab presentation screen   */
+  width: 100%;
+  height: 100%;
+  /* padding-top:10rem; */
+  max-height: 100vh;
+}
+
+.pres-word-container {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: flex-end;
+    height:50%;
+    width:100%
+}
+
+.pres-controller-container {
+    display:flex;
+    flex-wrap:wrap;
+    height:50%;
+    align-items: flex-end;
+    justify-content: center;
+    width:100%;
+}
+
+.pres-controller {
+    /* margin-top: auto; */
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: var(--sm);
+
+}
+
+.pres-controller > .btn {
+  padding: var(--md) var(--lg);
+  padding: 11px 30px;
+}
+
+.sidebar {
+  /* border-right: 1px solid rgba(0, 0, 0, 0.3); */
+  width: var(
+    --sidebar-width
+  ); /* why not just put 100% because won't it just take up remaining space? */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  max-height: 100vh;
+  background: rgba(0, 0, 0, 0.1);
+
+  /* top: 0;   */
+
+   background-color: rgb(28, 7, 50);
+   background: #EA8EA4;
+
+}
+
+.sidebar__brand {
+  align-items: center;
+  text-decoration: none;
+}
+
+/* TEXT */
+.pres-word {
+    font-size:10rem;
+    font-family: Calibri, Helvetica, 'Lucida Sans';
+
+}
+.pres-word--secondary {
+    font-size:8rem;
+    font-family: Calibri, Helvetica, 'Lucida Sans';
+    color:gray;
+}
+
+/* UTILITIES */
+
+.thin-scrollbar {
+    scrollbar-width: thin;
+  }
+
+/* UNITS */
+.margin-left--none {
+ margin-left:0!important
+}
+.margin-right--none {
+ margin-right:0!important
+}
+.margin--none {
+ margin:0!important
+}
+.margin-bottom--xs{
+ margin-bottom:var(--xs);
+}
+.margin-top--xs {
+ margin-top:var(--xs);
+}
+.margin-left--xs {
+ margin-left:var(--xs);
+}
+.margin-right--xs {
+ margin-right:var(--xs);
+}
+.margin--xs {
+ margin:var(--xs);
+}
+.margin-bottom--sm{
+ margin-bottom:var(--sm);
+}
+.margin-top--sm{
+ margin-top:var(--sm);
+}
+.margin-left--sm {
+ margin-left:var(--sm);
+}
+.margin-right--sm {
+ margin-right:var(--sm);
+}
+.margin--sm {
+ margin:var(--sm);
+}
+.margin-bottom--md {
+ margin-bottom:var(--md);
+}
+.margin-top--md {
+ margin-top:var(--md);
+}
+.margin-left--md {
+ margin-left:var(--md);
+}
+.margin-right--md {
+ margin-right:var(--md);
+}
+.margin--md {
+ margin:var(--md);
+}
+.margin-bottom--lg{
+ margin-bottom:var(--lg);
+}
+.margin-top--lg{
+ margin-top:var(--lg);
+}
+.margin-left--lg {
+ margin-left:var(--lg);
+}
+.margin-right--lg {
+ margin-right:var(--lg);
+}
+.margin--lg {
+ margin:var(--lg);
+}
+.margin-bottom--xl{
+ margin-bottom:var(--xl);
+}
+.margin-top--xl {
+ margin-top:var(--xl);
+}
+.margin-left--xl {
+ margin-left:var(--xl);
+}
+.margin-right--xl {
+ margin-right:var(--xl);
+}
+.margin--xl {
+ margin:var(--xl);
+}
+
+
+.padding--sm {
+  padding: var(--sm);
+}
+.padding-bottom--md {
+  padding-bottom: var(--md);
+}
+.padding-top--md{
+  padding-top: var(--md);
+}
+.padding-left--md {
+  padding-left: var(--md);
+}
+.padding-right--md {
+  padding-right: var(--md);
+}
+.padding--md {
+  padding: var(--md);
+}
+.padding-bottom--lg {
+  padding-bottom: var(--lg);
+}
+.padding-top--lg {
+  padding-top: var(--lg);
+}
+.padding-left--lg {
+  padding-left: var(--lg);
+}
+.padding-right--lg {
+  padding-right: var(--lg);
+}
+.padding--lg {
+  padding: var(--lg);
+}
+.padding-bottom--xl{
+  padding-bottom: var(--xl);
+}
+.padding-top--xl {
+  padding-top: var(--xl);
+}
+.padding-left--xl {
+  padding-left: var(--xl);
+}
+.padding-right--xl {
+  padding-right: var(--xl);
+}
+.padding--xl {
+  padding: var(--xl);
+}
