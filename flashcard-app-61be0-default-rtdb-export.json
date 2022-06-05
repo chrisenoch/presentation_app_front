@@ -1,0 +1,78 @@
+{
+  "posts": {
+    "-Mf2d1MJLlhdxhmi3De7": [
+      {
+        "english": "door",
+        "examples": [
+          "The man shut the door.",
+          "The car door was slammed shut."
+        ],
+        "spanish": "la puerta"
+      },
+      {
+        "english": "window",
+        "examples": [
+          "The girl looked through the window.",
+          "When a door closes, a window opens."
+        ],
+        "spanish": "la ventana"
+      },
+      {
+        "english": "table",
+        "examples": [
+          "He put the food on the table.",
+          "Time to put your cards on the table."
+        ],
+        "spanish": "la mesa"
+      },
+      {
+        "english": "computer",
+        "examples": [
+          "Where is David? He is on the computer.",
+          "Electricity was invented before the computer."
+        ],
+        "spanish": "el ordenador"
+      },
+      {
+        "english": "curtains",
+        "examples": [
+          "Close the curtains - it's getting dark.",
+          "The curtains don't match the wallpaper."
+        ],
+        "spanish": "las cortinas"
+      },
+      {
+        "english": "chair",
+        "examples": [
+          "Go and get a chair for your grandmother",
+          "The old man fell asleep in the chair."
+        ],
+        "spanish": "la silla"
+      },
+      {
+        "english": "lamp",
+        "examples": [
+          "Switch off the lamp - it's time for bed.",
+          "The dog knocked the lamp off the table."
+        ],
+        "spanish": "la lámpara"
+      },
+      {
+        "english": "light",
+        "examples": [
+          "Switch the light on - I can't see.",
+          "Edison invented the light bulb."
+        ],
+        "spanish": "la luz"
+      },
+      {
+        "english": "drawer",
+        "examples": [
+          "Put the sellotape in the drawer.",
+          "Which drawer are your keys in?."
+        ],
+        "spanish": "el cájon"
+      }
+    ]
+  }
+}
