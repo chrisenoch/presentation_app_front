@@ -12,7 +12,7 @@ import { map, tap} from 'rxjs/operators';
 export class PresWordsService {
   constructor(private http: HttpClient) {}
 
-  private presWords: PresWord[];
+  private presWords: PresWord[] = [];
 
   getPresWords(): Observable<PresWord[]> {
     const presWords = of(PRESWORDS);
@@ -32,7 +32,8 @@ export class PresWordsService {
               wordsFetched.push({...responseData[key]});
             }
           }
-          return wordsFetched;
+          //return wordsFetched;
+          return Object.values(wordsFetched[0]);
         })
         , tap(
           words => {
@@ -40,8 +41,11 @@ export class PresWordsService {
             // console.log("Words from database " + JSON.stringify(Object.values(words)));
             // console.log("Words from database " + JSON.stringify(Object.values(words[0])));
             // console.log("Words from database " + JSON.stringify(words[0]));
+            console.log("fetched words before Object.values below");console.log(words);
             this.presWords = Object.values(words[0]);
-            //console.log("Words 2" + this.words2);
+            console.log("fetched words after Object.values below");
+            console.log(this.presWords);
+
           })
     )}
 

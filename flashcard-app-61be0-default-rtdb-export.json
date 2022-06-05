@@ -7,7 +7,7 @@
           "The man shut the door.",
           "The car door was slammed shut."
         ],
-        "spanish": "la puerta"
+        "translation": "la puerta"
       },
       {
         "english": "window",
@@ -15,7 +15,7 @@
           "The girl looked through the window.",
           "When a door closes, a window opens."
         ],
-        "spanish": "la ventana"
+        "translation": "la ventana"
       },
       {
         "english": "table",
@@ -23,7 +23,7 @@
           "He put the food on the table.",
           "Time to put your cards on the table."
         ],
-        "spanish": "la mesa"
+        "translation": "la mesa"
       },
       {
         "english": "computer",
@@ -31,7 +31,7 @@
           "Where is David? He is on the computer.",
           "Electricity was invented before the computer."
         ],
-        "spanish": "el ordenador"
+        "translation": "el ordenador"
       },
       {
         "english": "curtains",
@@ -39,7 +39,7 @@
           "Close the curtains - it's getting dark.",
           "The curtains don't match the wallpaper."
         ],
-        "spanish": "las cortinas"
+        "translation": "las cortinas"
       },
       {
         "english": "chair",
@@ -47,7 +47,7 @@
           "Go and get a chair for your grandmother",
           "The old man fell asleep in the chair."
         ],
-        "spanish": "la silla"
+        "translation": "la silla"
       },
       {
         "english": "lamp",
@@ -55,7 +55,7 @@
           "Switch off the lamp - it's time for bed.",
           "The dog knocked the lamp off the table."
         ],
-        "spanish": "la lámpara"
+        "translation": "la lámpara"
       },
       {
         "english": "light",
@@ -63,7 +63,7 @@
           "Switch the light on - I can't see.",
           "Edison invented the light bulb."
         ],
-        "spanish": "la luz"
+        "translation": "la luz"
       },
       {
         "english": "drawer",
@@ -71,7 +71,7 @@
           "Put the sellotape in the drawer.",
           "Which drawer are your keys in?."
         ],
-        "spanish": "el cájon"
+        "translation": "el cájon"
       }
     ]
   }
