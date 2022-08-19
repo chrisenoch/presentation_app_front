@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'presentation-app';
+  isLoggedIn = false; //changethis - move to other login class?
+
 }
+

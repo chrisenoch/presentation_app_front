@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { PresComponent } from './presentation/pres/pres.component';
 import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
+import { LoginComponent } from './login/login/login.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
     AppComponent,
     NavbarComponent,
     PresComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

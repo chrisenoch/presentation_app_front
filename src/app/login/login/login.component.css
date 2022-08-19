@@ -1,0 +1,23 @@
+.login-container {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 5rem;
+}
+
+.cross {
+position: absolute;
+top: 20px;
+right: 20px;
+display: flex;
+padding: 6px;
+margin: -6px;
+cursor: pointer;
+}
+
+.cross__iconfinder {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-image: url("../../resources/svg/211652_close_icon_iconfinder.svg");
+  background-size: contain;
+}
