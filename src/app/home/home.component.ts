@@ -34,13 +34,6 @@ export class HomeComponent implements OnInit {
    }
   }
 
-  onLogout(): void {
-    var userPool = new CognitoUserPool(this.poolData);
-    var currentUser = userPool.getCurrentUser();
-    currentUser.signOut();
-    this.router.navigate(['']);
-  }
-
   getAttributes(): void {
     var userPool = new CognitoUserPool(this.poolData);
     var currentUser = userPool.getCurrentUser();
@@ -62,6 +55,7 @@ export class HomeComponent implements OnInit {
 
   messageHelloAdmin(): void {
     this.apiRestService.getHelloAdmin().subscribe(data => {
+      console.log("message from home component messageHelloAdmin() method: " + data.message);
       this.message = data.message;
     },
     err => {
@@ -71,6 +65,7 @@ export class HomeComponent implements OnInit {
 
   messageHelloUser(): void {
     this.apiRestService.getHelloUser().subscribe(data => {
+      console.log("message from home component messageHelloUser() method: " + data.message);
       this.message = data.message;
     },
     err => {
