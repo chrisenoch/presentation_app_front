@@ -1,21 +1,2 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="page-wrapper">
-      <div class="main-wrapper">
-        <app-sidebar></app-sidebar>
-        <main class="main-container">
-          <app-pres></app-pres>
-          <app-login *ngIf="!isLoggedIn"></app-login>
-        </main>
-      </div>
-      <app-navbar></app-navbar>
-    </div>
-  </body>
-</html>
+<app-menu></app-menu>
+<router-outlet></router-outlet>
