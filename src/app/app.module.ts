@@ -11,7 +11,6 @@ import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
 import { interceptorSpringProvider } from './interceptors/api-rest.interceptor';
 
 
@@ -23,8 +22,7 @@ import { interceptorSpringProvider } from './interceptors/api-rest.interceptor';
     SidebarComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent,
-    MenuComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

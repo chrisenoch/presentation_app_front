@@ -32,51 +32,51 @@ export class PresComponent implements OnInit {
       .fetchPresWords()
       // .subscribe(presWords => this.presWords = presWords);
       .subscribe((presWords) => {
-        console.dir('in fetchWords subscribe, print presWords'); // console.log(presWords);
+        console.log('in fetchWords subscribe, print presWords'); // console.log(presWords);
         this.presWords = presWords;
-        console.dir("Value of presWords: " + this.presWords);
+        console.dir(`Value of presWord first entry: ${this.presWords[0].id} ${this.presWords[0].english} ${this.presWords[0].spanish} ${this.presWords[0].level}`);
         //this.updateWords(); //only call updateWords when words have arrived
       });
   }
 
-  // updateWords(): void {
-  //   console.log("in updateWords print translation");
-  //   console.log(this.presWords[this.presWordNo].translation);
+  updateWords(): void {
+    console.log("in updateWords print translation");
+    console.log(this.presWords[this.presWordNo].spanish);
 
 
-  //   this.presWord = this.isTranslationPresWord
-  //     ? this.presWords[this.presWordNo].translation
-  //     : this.presWords[this.presWordNo].english;
-  //   this.presWordSecondary = this.isTranslationPresWord
-  //     ? this.presWords[this.presWordNo].english
-  //     : this.presWords[this.presWordNo].translation;
-  // }
+    this.presWord = this.isTranslationPresWord
+      ? this.presWords[this.presWordNo].spanish
+      : this.presWords[this.presWordNo].english;
+    this.presWordSecondary = this.isTranslationPresWord
+      ? this.presWords[this.presWordNo].english
+      : this.presWords[this.presWordNo].spanish;
+  }
 
   onStart(event?: MouseEvent) {
     console.log('onStart called');
     this.presWordNo = 0;
-    //this.updateWords();
+    this.updateWords();
   }
 
   onBack(event?: MouseEvent) {
     console.log('onBack called');
     if (this.presWordNo > 0) {
       --this.presWordNo;
-      //this.updateWords();
+      this.updateWords();
     } //dont go back further than zero.
   }
 
   onToggle(event?: MouseEvent) {
     console.log('onToggle called');
     this.isTranslationPresWord = !this.isTranslationPresWord;
-    //this.updateWords();
+    this.updateWords();
   }
 
   onExamples(event?: MouseEvent) {
     console.log('onExamples called');
 
     //add logic here
-    //this.updateWords();
+    this.updateWords();
   }
 
   onSeen(event?: MouseEvent) {
@@ -84,7 +84,7 @@ export class PresComponent implements OnInit {
     //add logic to add to words to review array
     if (this.presWordNo < this.presWords.length - 1) {
       ++this.presWordNo;
-      //this.updateWords();
+      this.updateWords();
     }
   }
 
@@ -92,13 +92,13 @@ export class PresComponent implements OnInit {
     console.log('onSkip called');
     if (this.presWordNo < this.presWords.length - 1) {
       ++this.presWordNo;
-      //this.updateWords();
+      this.updateWords();
     }
   }
 
   onEnd(event?: MouseEvent) {
     console.log('onEnd called');
     this.presWordNo = this.presWords.length - 1;
-    //this.updateWords();
+    this.updateWords();
   }
 }
