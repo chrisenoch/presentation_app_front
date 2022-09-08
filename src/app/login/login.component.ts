@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CognitoUserPool, CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
 import { environment } from 'src/environments/environment';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,14 +14,14 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
   onLogin(): void {
+    console.log("onlogin called");
+
     // datos grupo (pool)
     var poolData = {
       UserPoolId: environment.UserPoolId, // Your user pool id here
@@ -42,7 +43,11 @@ export class LoginComponent implements OnInit {
     // login
     cognitoUser.authenticateUser(authDetails, {
       onSuccess: (result) => {
-        console.log('Token: ' + result.getAccessToken().getJwtToken());
+        //console.log('Token: ' + result.getAccessToken().getJwtToken());
+
+        //inform entire app that user has successfully logged in
+        this.authService.isAuthSub.next(true);
+
         this.router.navigate(['/home']);
       },
       onFailure: (err) => {
