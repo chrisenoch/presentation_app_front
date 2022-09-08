@@ -1,4 +1,4 @@
-export class Word {
+export class PresWord {
     id: number;
     english: string;
     spanish: string;

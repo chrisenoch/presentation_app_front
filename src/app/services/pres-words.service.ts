@@ -1,28 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Subject} from 'rxjs';
-import { PRESWORDS } from '../mock-pres-words';
-import { PresWord } from '../pres-word';
 import { HttpClient } from '@angular/common/http';
 import { map, tap} from 'rxjs/operators';
-import { Word } from '../entities/word';
+import { environment } from 'src/environments/environment';
+import { PresWord } from '../entities/presWord';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PresWordsService {
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   private presWords: PresWord[] = [];
 
-  getPresWords(): Observable<PresWord[]> {
-    const presWords = of(PRESWORDS);
-    return presWords;
+  // getPresWords(): Observable<PresWord[]> {
+  //   const presWords = of(PRESWORDS);
+  //   return presWords;
+  // }
+
+  fetchPresWords(): Observable<PresWord[]> {
+
+    return this.httpClient.get<GetResponseWords>(environment.springApiUrl + 'words/').pipe(
+      map(response => response._embedded.words)
+    );
   }
+  fetchPresWordsOld(){
 
-  fetchPresWords(){
-
-    return this.http.get<{ [key: string]: PresWord}>("https://flashcard-app-2022-default-rtdb.firebaseio.com/posts.json")
+    return this.httpClient.get<{ [key: string]: PresWord}>("https://flashcard-app-2022-default-rtdb.firebaseio.com/posts.json")
     .pipe(
       map( responseData =>
         {
@@ -53,6 +58,6 @@ export class PresWordsService {
 
 interface GetResponseWords {
   _embedded: {
-    words: Word[];
+    words: PresWord[];
   }
 }
