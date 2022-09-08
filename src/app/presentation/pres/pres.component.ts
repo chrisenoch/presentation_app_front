@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PresWordsService } from 'src/app/pres-words.service';
+import { PresWordsService } from 'src/app/services/pres-words.service';
 import { PresWord } from 'src/app/pres-word';
 
 @Component({

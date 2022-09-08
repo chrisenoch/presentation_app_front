@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   UserPoolId: 'eu-west-3_NE2CaMEGd',
   ClientId: '4nkoi94t6o2gq7frdhese3itra',
-  springURL: 'http://localhost:8080/',
+  springApiUrl: 'http://localhost:8080/api/', //THE FINAL SLASH IS NEEDED
   ACCESS_TOKEN: 'accessToken',
   AUTHORIZATION: 'Authorization',
   BEARER: 'Bearer '

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Subject} from 'rxjs';
-import { PRESWORDS } from './mock-pres-words';
-import { PresWord } from './pres-word';
+import { PRESWORDS } from '../mock-pres-words';
+import { PresWord } from '../pres-word';
 import { HttpClient } from '@angular/common/http';
 import { map, tap} from 'rxjs/operators';
+import { Word } from '../entities/word';
 
 @Injectable({
   providedIn: 'root',
@@ -48,16 +49,10 @@ export class PresWordsService {
 
           })
     )}
+}
 
-
-
-
-
-
-
-
-
-
-
-
+interface GetResponseWords {
+  _embedded: {
+    words: Word[];
+  }
 }

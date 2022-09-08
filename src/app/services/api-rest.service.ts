@@ -8,17 +8,17 @@ import { Injectable } from '@angular/core';
 })
 export class ApiRestService {
 
-  springURL = environment.springURL;
+  springApiUrl = environment.springApiUrl;
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
   public getHelloAdmin():Observable<any> {
-    return this.httpClient.get<any>(this.springURL + 'hello-admin');
+    return this.httpClient.get<any>(this.springApiUrl + 'hello-admin');
   }
 
   public getHelloUser():Observable<any> {
-    return this.httpClient.get<any>(this.springURL + 'hello-user');
+    return this.httpClient.get<any>(this.springApiUrl + 'hello-user');
   }
 }
