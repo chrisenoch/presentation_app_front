@@ -1,16 +1,12 @@
 .navbar {
-  background-color: rgb(28, 30, 33, .9);
-  /* background-color: rgba(68, 34, 102, 0.796);
-  background-color: rgb(216, 184, 108);
-  background-color: rgb(231, 208, 211);
-  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%);
-  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%),linear-gradient(129.1deg, #EA8EA4 -1.7%, rgba(253, 229, 178, 0) 72.42%),linear-gradient(26.22deg, #7735E4 2.78%, #DA70A9 30.98%, #F3C690 53.17%);
-  padding: 12px; */
-  /* border-top: .3px solid black; */
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  
 }
 
 .navbar--fixed {
-  position: sticky;
+  position: fixed;
 }
 
 .navbar__brand {
@@ -18,8 +14,17 @@
 }
 
 .navbar__inner {
+  background-color: rgb(28, 27, 32);
   display: flex;
   flex-wrap: wrap;
+  padding: var(--sm) var(--md);
+  /* background-color: rgba(68, 34, 102, 0.796);
+  background-color: rgb(216, 184, 108);
+  background-color: rgb(231, 208, 211);
+  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%);
+  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%),linear-gradient(129.1deg, #EA8EA4 -1.7%, rgba(253, 229, 178, 0) 72.42%),linear-gradient(26.22deg, #7735E4 2.78%, #DA70A9 30.98%, #F3C690 53.17%);
+  padding: 12px; */
+  /* border-top: .3px solid black; */
 }
 
 .navbar__item {
