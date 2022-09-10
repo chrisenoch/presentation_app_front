@@ -50,7 +50,7 @@ img {
 
 .main-container {
   height: 100%;
-  width: 100%; /*need to set this because this is a flex item and default is t size according to content. Could also set flez-grow: 1 */
+  width: 100%; /*need to set this because this is a flex item and default is to size according to content. Could also set flex-grow: 1 */
   max-width: calc(100% - var(--sidebar-width));
   /* padding-top:var(--md);
   padding-bottom:var(--lg);
@@ -71,12 +71,22 @@ img {
   height: 100%;
 }
 
-.centre-in-entire-page-wrapper {
+.centre-in-entire-page-wrapper-abs {
   transform: translateY(-50%) translateX(-50%);
   position: absolute;
   top: 50%;
   left: 50%;
   max-height: 100%;
+}
+
+.centre-in-entire-page-wrapper-flex {
+  display:flex;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
 }
 
 /* LAYOUT */
@@ -92,11 +102,70 @@ img {
   margin: auto var(--md);
 }
 
+.card { 
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 90vh;
+  max-width: 90%;
+  width: 30rem;
+  box-shadow: rgb(0 0 0 / 12%) 0px 0px 43px 7px;
+  border-radius: var(--md);
+  padding: var(--xl) 2.5rem;
+  width:50rem;
+}
+
 /* UTILITIES */
 
+.form-top-text{
+  margin-top:3rem;
+  margin-bottom:2rem;
+  font-size: 1.4rem;
+}
+
+.field-group {
+  padding-bottom: 13px;
+  text-align: left;
+}
+
+.field-label {
+  display:inline-block;
+  padding-bottom: var(--sm);
+}
+
+.help-block {
+  margin-top: var(--md);
+}
+
+.help-text {
+  font-size: 1.4rem;
+}
+
+.error {
+  color: rgb(255, 90, 131);
+}
+
+.input-field {
+  border: 1px solid rgb(228, 222, 232);
+  border-radius: var(--sm);
+  padding: var(--sm) var(--sm) var(--sm) var(--md);
+  width: 100%;
+  height: 40px;
+  outline: none;
+  
+  font-size: 16px;
+}
+
+.field-label {
+  padding-bottom: var(--sm);
+}
+
 .thin-scrollbar {
-    scrollbar-width: thin;
-  }
+  scrollbar-width: thin;
+}
+
+
+
 
 /* UNITS */
 .margin-left--none {

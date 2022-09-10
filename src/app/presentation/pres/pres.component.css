@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: flex-end;
     height:50%;
-    width:100%
 }
 
 .pres-controller-container {
@@ -23,14 +22,12 @@
     height:50%;
     align-items: flex-end;
     justify-content: center;
-    width:100%;
 }
 
 .pres-controller {
     /* margin-top: auto; */
     display:flex;
     justify-content: center;
-    width: 100%;
     margin-bottom: var(--sm);
 
 }
