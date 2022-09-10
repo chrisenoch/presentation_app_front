@@ -5,6 +5,8 @@
   --md:1rem!important;
   --sm:.5rem!important;
   --xs:.25rem!important;
+
+  --danger: rgb(255, 90, 131);
 }
 
 html {
@@ -30,6 +32,10 @@ body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(28, 30, 33);
+}
+
+.error {
+  color: var(--danger);
 }
 
 /* HTML TAGS */
@@ -99,7 +105,7 @@ img {
   font-size: 2.5rem;
   color:white;
   padding: var(--md) var(--lg);
-  margin: auto var(--md);
+  margin: 10px var(--md);
 }
 
 .card { 
@@ -115,11 +121,15 @@ img {
   width:50rem;
 }
 
+.center-inline {
+  text-align: center;
+}
+
 /* UTILITIES */
 
 .form-top-text{
   margin-top:3rem;
-  margin-bottom:2rem;
+  margin-bottom:3rem;
   font-size: 1.4rem;
 }
 
@@ -129,6 +139,7 @@ img {
 }
 
 .field-label {
+  font-size: 1.5rem;
   display:inline-block;
   padding-bottom: var(--sm);
 }
@@ -141,19 +152,19 @@ img {
   font-size: 1.4rem;
 }
 
-.error {
-  color: rgb(255, 90, 131);
-}
-
 .input-field {
   border: 1px solid rgb(228, 222, 232);
   border-radius: var(--sm);
   padding: var(--sm) var(--sm) var(--sm) var(--md);
   width: 100%;
-  height: 40px;
+  height: 4rem;
   outline: none;
-  
-  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.vertical-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .field-label {

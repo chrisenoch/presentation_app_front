@@ -1,45 +1,46 @@
 <div class="centre-in-entire-page-wrapper-flex">
   <div class="card">
-    <img
+    <!-- <img
       src="..."
       alt="pres-logo"
       class="..."
-    />
+    /> -->
+    <h1 class="center-inline">Sign in</h1>
     <span class="form-top-text"
-      >Already have an account?
+      >Don't have an account?
       <a
-        data-cy="login-link"
         class="..."
-        href="/signin"
-        >Sign in</a
+        routerLink="/signup"
+        >Sign up</a
       ></span
     >
-    <form class="signup-form">
-      <div data-cy="signup-email" class="field-group">
+  
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate class="vertical-form">
+      <div class="field-group">
         <label for="email" color="text" class="field-label"
-          ><span>Email</span></label
+          >Email</label
         ><input
           id="email"
           type="email"
           placeholder="Enter your email"
           class="input-field"
+          [(ngModel)]="email"
           name="email"
-          value=""
         />
       </div>
-      <div data-cy="password" class="field-group">
+      <div class="field-group">
         <label for="password" color="text" class="field-label"
-          ><span>Password</span></label
+          >Password</label
         ><input
           id="password"
           type="password"
           placeholder="Enter your password"
           class="input-field"
           name="password"
-          value=""
+          [(ngModel)]="password"
         />
       </div>
-      <button class="btn">
+      <button [disabled]="!f.valid" class="btn">
         <i class="fas fa-sign-in-alt"></i>Login</button>
     </form>
   </div>
