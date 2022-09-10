@@ -175,7 +175,10 @@ img {
   scrollbar-width: thin;
 }
 
-
+.icon-text {
+  margin-left: var(--md);
+  display: inline-block;
+}
 
 
 /* UNITS */

@@ -18,12 +18,11 @@
     </div>
     <div class="navbar__items navbar__items--right">
       <a class="navbar__item navbar__link" href="#">User area</a>
-      <a *ngIf="!isAuth;" class="navbar__item navbar__link" routerLink="/login">Login</a>
+      <!-- <a *ngIf="!isAuth;" class="navbar__item navbar__link" routerLink="/login">Login</a> -->
       <a *ngIf="isAuth;" class="navbar__item navbar__link" routerLink="/" (click)="onLogout()">Logout</a>
-      <a *ngIf="!isAuth; "class="navbar__item navbar__link" routerLink="/signup">Signup</a>
+      <!-- <a *ngIf="!isAuth; "class="navbar__item navbar__link" routerLink="/signup">Signup</a> -->
       <!-- <a class="navbar__item navbar__link" routerLink="/signup">value of isAuth: {{ isAuth }}</a>
       <a class="navbar__item navbar__link" routerLink="/" (click)="checkIfAuthVar()">Check isAuth</a> --> -->
-
     </div>
   </div>
 </nav>

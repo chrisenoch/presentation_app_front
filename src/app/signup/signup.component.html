@@ -33,6 +33,7 @@
               >Name</label
             ><input
               id="givenName"
+              type="text"
               placeholder="Enter your name"
               class="input-field"
               [(ngModel)]="givenName"
@@ -44,6 +45,7 @@
               >Nickname</label
             ><input
               id="nickname"
+              type="text"
               placeholder="Enter your nickname"
               class="input-field"
               [(ngModel)]="nickname"
@@ -63,7 +65,7 @@
           />
         </div>
         <button [disabled]="!f.valid" class="btn">
-          <i class="fas fa-sign-in-alt"></i>Sign up</button>
+          <i class="fas fa-sign-in-alt"></i><span class="icon-text">Sign up</span></button>
       </form>
     </div>
   </div>
