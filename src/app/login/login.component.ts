@@ -24,8 +24,6 @@ export class LoginComponent implements OnInit {
     console.log("onlogin called");
     console.log(form);
 
-    return;
-
     // datos grupo (pool)
     var poolData = {
       UserPoolId: environment.UserPoolId, // Your user pool id here
