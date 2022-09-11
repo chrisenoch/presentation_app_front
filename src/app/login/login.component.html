@@ -15,8 +15,8 @@
       ></span
     >
   
-    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate class="vertical-form">
-      <div class="field-group">
+    <form #f="ngForm" (ngSubmit)="onLogin(f)" novalidate class="form">
+      <div class="field-group" [ngClass]="{'field-group--error': !emailVal.valid && emailVal.touched}">
         <label for="email" color="text" class="field-label"
           >Email</label
         ><input
@@ -26,9 +26,13 @@
           class="input-field"
           [(ngModel)]="email"
           name="email"
+          required
+          email
+          #emailVal="ngModel"
         />
       </div>
-      <div class="field-group">
+      <span class="form--help-under-field help-text error" *ngIf="!emailVal.valid && emailVal.touched">Please enter a valid email</span>
+      <div class="field-group" [ngClass]="{'field-group--error': !emailVal.valid && emailVal.touched}">
         <label for="password" color="text" class="field-label"
           >Password</label
         ><input
@@ -38,8 +42,12 @@
           class="input-field"
           name="password"
           [(ngModel)]="password"
+          required
+          password
+          #passwordVal="ngModel"
         />
       </div>
+      <span class="form--help-under-field help-text error" *ngIf="!passwordVal.valid && passwordVal.touched">Please enter a valid password</span>
       <button [disabled]="!f.valid" class="btn">
         <i class="fas fa-sign-in-alt"></i><span class="icon-text">Login</span></button>
     </form>

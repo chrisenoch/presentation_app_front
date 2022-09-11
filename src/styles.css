@@ -134,8 +134,12 @@ img {
 }
 
 .field-group {
-  padding-bottom: 13px;
+  margin-bottom: 1.3rem;
   text-align: left;
+}
+
+.field-group--error {
+  margin-bottom: .5rem;
 }
 
 .field-label {
@@ -144,12 +148,16 @@ img {
   padding-bottom: var(--sm);
 }
 
-.help-block {
-  margin-top: var(--md);
+.form--help-under-field {
+  margin-bottom: 1.3rem;
 }
 
 .help-text {
   font-size: 1.4rem;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid var(--danger);
 }
 
 .input-field {
@@ -162,7 +170,7 @@ img {
   font-size: 1.6rem;
 }
 
-.vertical-form {
+.form {
   display: flex;
   flex-direction: column;
 }

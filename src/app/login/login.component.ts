@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CognitoUserPool, CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
 import { environment } from 'src/environments/environment';
@@ -19,8 +20,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLogin(): void {
+  onLogin(form: NgForm): void {
     console.log("onlogin called");
+    console.log(form);
+
+    return;
 
     // datos grupo (pool)
     var poolData = {
